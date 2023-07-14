@@ -56,7 +56,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("You are not Authorized"))
 		return
 	}
-	expirationTime := time.Now().Add(time.Minute * 5)
+	expirationTime := time.Now().Add(time.Minute *15)
 
 	//creating payload to store username and expiry inside the jwt
 	claims := &Claims{
@@ -215,6 +215,7 @@ func GetEmpDetails(w http.ResponseWriter, r *http.Request) {
 	value := GetEmployeeResponseStruct{}
 
 	err = row.Scan(
+		&value.ID,
 		&value.EmployeeID,
 		&value.LastName,
 		&value.FirstName,
@@ -265,6 +266,7 @@ func GetAllEmployeeDetails(w http.ResponseWriter, r *http.Request) {
 
 	for rows.Next() {
 		err = rows.Scan(
+			&value.ID,
 			&value.EmployeeID,
 			&value.LastName,
 			&value.FirstName,

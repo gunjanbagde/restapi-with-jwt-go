@@ -20,24 +20,25 @@ import (
 )
 
 type InsertEmployeeRequest struct {
-	EmployeeID int    `json:"ID"`
+	EmployeeID int    `json:"EID"`
 	LastName   string `json:"lastname"`
 	FirstName  string `json:"firstname"`
 	City       string `json:"city"`
 }
 type GetEmployeeResponseStruct struct {
-	EmployeeID int    `json:"ID"`
+	ID         int    `json:"ID"`
+	EmployeeID int    `json:"EID"`
 	LastName   string `json:"lastname"`
 	FirstName  string `json:"firstname"`
 	City       string `json:"city"`
 }
 
 type GetEmpDetailsRequest struct {
-	EmployeeID int `json:"ID"`
+	EmployeeID int `json:"EID"`
 }
 
 type DeleteEmpDetailsRequest struct {
-	EmployeeID int `json:"ID"`
+	EmployeeID int `json:"EID"`
 }
 
 const (
