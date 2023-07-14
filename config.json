@@ -1,0 +1,21 @@
+{
+    "Logger":{
+
+        "Zap":{
+           "IsEnabled":true,
+           "MaxSize":200, 
+           "MaxBackups":5, 
+           "MaxAge":2, 
+           "Filename":"log.txt", 
+           "Level":"Debug" 
+        } 
+    },
+    "mysql":{
+        "Database": "newdb",
+        "Host": "localhost:3306",
+        "Password": "Pass@123",
+        "Username": "root"
+    }
+
+  
+}
